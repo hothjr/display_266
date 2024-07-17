@@ -29,10 +29,11 @@ void setup()
   Serial.println("Initializing The E-Paper...");
   display.init();
   Serial.println("Initialization Done!");
-  Serial.println("Printing Messages, Please Wait...");
-  PrintMessages();
+  // Serial.println("Printing Messages, Please Wait...");
+  // PrintMessages();
+  display.fillScreen(GxEPD_RED);
   Serial.println("Printing Done! E-Paper Is Hibernating!");
-  display.fillRoundRect(127, 44.6, 55.5, 32.6, 10, GxEPD_BLACK);
+
   display.hibernate();
 }
  
